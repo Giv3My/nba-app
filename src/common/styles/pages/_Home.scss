@@ -1,0 +1,124 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teams {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.conference-name {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.conference-east {
+  color: #3978d2;
+}
+
+.conference-west {
+  color: #d4455e;
+}
+
+.team {
+  width: 50%;
+  padding-bottom: 120px;
+}
+
+.team-east {
+  background: linear-gradient(180deg, #ffffff 0%, #0e499d 100%);
+}
+
+.team-west {
+  background: linear-gradient(180deg, #ffffff 0%, #d30529 100%);
+}
+
+.teams-wrapper {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1840px) {
+  .teams-wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .teams-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .teams-wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 790px) {
+  .teams-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .conference-name {
+    font-size: 26px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .conference-name {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .teams {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team {
+    background: none;
+    width: 80%;
+  }
+
+  .team-east {
+    padding-bottom: 40px;
+  }
+
+  .conference-name {
+    font-size: 28px;
+  }
+
+  .teams-wrapper {
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .team {
+    width: 85%;
+  }
+}
+
+@media (max-width: 320px) {
+  .team {
+    width: 100%;
+  }
+
+  .conference-name {
+    font-size: 24px;
+  }
+}

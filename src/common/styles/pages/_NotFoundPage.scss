@@ -1,0 +1,26 @@
+.not-found-page {
+  .header-nfp {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #051c2d;
+  }
+
+  .container-nfp {
+    padding: 1rem;
+    text-align: center;
+
+    h1 {
+      margin: 20px 0;
+    }
+  }
+
+  a {
+    color: #1d428a;
+    text-decoration: underline;
+
+    &:active {
+      color: #c8102e;
+    }
+  }
+}
