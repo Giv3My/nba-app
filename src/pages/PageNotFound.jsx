@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function PageNotFound() {
+  const { state } = useLocation();
+
   return (
     <div className="not-found-page">
       <div className="header-nfp">
@@ -29,10 +31,14 @@ function PageNotFound() {
       </div>
       <div className="container-nfp">
         <h1>Content Unavailable</h1>
-        <p>
-          The page you are looking for is not available. Go to the{' '}
-          <Link to="/">homepage</Link>.
-        </p>
+        {state?.serverError ? (
+          <p>The server is currently shutdown. Please try again later.</p>
+        ) : (
+          <p>
+            The page you are looking for is not available. Go to the{' '}
+            <Link to="/">homepage</Link>.
+          </p>
+        )}
       </div>
     </div>
   );

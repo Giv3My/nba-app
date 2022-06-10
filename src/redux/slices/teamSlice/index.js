@@ -4,7 +4,7 @@ import { fetchTeams, fetchCurrentTeam } from './fetching';
 
 const initialState = {
   teams: null,
-  currentTeam: null
+  currentTeam: null,
 };
 
 export const teamSlice = createSlice({
@@ -12,6 +12,9 @@ export const teamSlice = createSlice({
   initialState,
   extraReducers: {
     [fetchTeams.fulfilled]: (state, { payload }) => {
+      state.teams = payload;
+    },
+    [fetchTeams.rejected]: (state, { payload }) => {
       state.teams = payload;
     },
     [fetchCurrentTeam.pending]: (state) => {
@@ -22,8 +25,8 @@ export const teamSlice = createSlice({
     },
     [fetchCurrentTeam.rejected]: (state, { payload }) => {
       state.currentTeam = payload;
-    }
-  }
+    },
+  },
 });
 
 export default teamSlice.reducer;

@@ -21,16 +21,6 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
-    // <>
-    //   <Header />
-    //   <Routes>
-    //     <Route exact path="/" element={<Home />} />
-    //     <Route exact path="/team/:teamId" element={<TeamProfile />} />
-    //     <Route exact path="/team/:teamId/player/:playerId" element={<PlayerProfile />} />
-    //     <Route exact path="/page-not-found" element={<PageNotFound />} />
-    //     <Route path="*" element={<PageNotFound />} />
-    //   </Routes>
-    // </>
   );
 }
 
