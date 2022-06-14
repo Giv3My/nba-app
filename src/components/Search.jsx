@@ -41,7 +41,11 @@ function Search() {
 
   const searchPlayers = async () => {
     try {
-      await dispatch(fetchSearchPlayers(search)).unwrap();
+      const data = await dispatch(fetchSearchPlayers(search.trim())).unwrap();
+
+      if (data === null) {
+        setSearch('');
+      }
     } catch (err) {
       setError(true);
     } finally {
@@ -50,7 +54,7 @@ function Search() {
   };
 
   const onSearchChange = (e) => {
-    setSearch(e.target.value.trim());
+    setSearch(e.target.value);
   };
 
   const onClearClick = () => {
